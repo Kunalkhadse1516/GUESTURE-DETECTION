@@ -1,0 +1,135 @@
+<!Doctype html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<html>
+  <title>Hand Gesture and Live Painting </title>
+<style>
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: none; /* Green border */
+  color: white; /* White text */
+  padding: 30px 62px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: right; /* Float the buttons side by side */
+  margin: 12px 6px;
+}
+#div1{
+    background-color: BurlyWood;
+    width: 33.33%;
+    float: right;
+}
+#div2{
+    background-color:cornsilk;
+    width: 33.33%;
+    margin: 0 auto;
+}
+#div3{
+    background-color: BurlyWood;
+    width: 33.33%;
+    float: left;
+}
+#div4{
+  width: 33.33%;
+    margin: 0 auto;
+}
+body { 
+    background-color: cornsilk;
+    }
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  /*border: 3px solid green;*/ 
+}
+.center1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; 
+}
+p.para {
+  text-align: right;
+}
+p.para1 {
+  text-align: left;
+}
+.container{
+          height: 200px;
+          width: 500px;
+          /*border: 2px solid black;*/
+          margin-top: 30px;
+        }
+
+</style>
+<body>
+    <img src="{{url_for('static',filename='hand gesture.jpg')}}"
+
+    alt="Hand Gesture" width="350" height="350" 
+    align="left">
+    <img src="{{url_for('static',filename='AI printer.jpg')}}"
+    alt="AI printer" width="350" height="350" 
+    align="right">
+
+<div id="div2">
+<div class="center1">
+<h2>Hand Gesture and Live Painting</h2>
+</div>
+<div class="btn-group">
+    <div class="center">
+      <a href="/Enter">
+  <button><b>Gesture Reading</b></button>
+</a>
+  <a href="/enter">
+  <button><b>Live Painting</b></button>
+</a>
+</div>
+</div>
+</div>
+<div id="div1">
+    <p class="para1">
+    Virtual painter using AI is the real time feature included in hand gesture recognition where one can use their hand to draw on the screen.      
+</p>
+<p class="para1">
+  In this, first it track our hand and get its landmarks and then use the points to draw on the screen. Two fingers are used for selecting the objects : like brush or pencil and one finger is used for drawing.
+</p>
+<a href="/PainterInterface">
+  <p class="para1">
+    <div id="div4">
+  <button class="btn btn-primary btn-lg">Guideline</button>
+</div>
+</p>
+</a>
+</div>
+<div id="div3">
+    <p class="para1">
+        Deep learning, and computer vision have made a great impact on the lives of people who cannot hear or speak. Hand gesture recognition project will  bridge the gap between normal people and the ones who cannot speak or hear.
+        This will be very helpful for them as they can communicate with others through their hand gestures. Here gestures are converted in the form of text to be understood by common people.
+    </p>
+    <a href="/GestureInterface">
+      <p class="para">
+        <div id="div4">
+      <button class="btn btn-primary btn-lg">Guideline</button>
+    </div>
+    </p>
+    </a>
+</div>
+
+</body>
+</html>
